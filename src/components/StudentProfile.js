@@ -18,7 +18,7 @@ const ScorePage = () => {
     if (studentId) {
       axios
         .get(
-          `http://localhost:5000/api1/getstudentByUserId?studentid=${studentId}`
+          `https://anokhi-pehel-backend.vercel.app/api1/getstudentByUserId?studentid=${studentId}`
         )
         .then((res) => {
           console.log("Fetched mentor data:", res.data); // Log fetched data
@@ -30,7 +30,7 @@ const ScorePage = () => {
 
       axios
         .get(
-          `http://localhost:5000/api6/getMarksByUserId?studentid=${studentId}`
+          `https://anokhi-pehel-backend.vercel.app/api6/getMarksByUserId?studentid=${studentId}`
         )
         .then((res1) => {
           //   console.log("Fetched class schedule data:", res1.data); // Log fetched data
