@@ -11,7 +11,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://anokhi-pehel-dashboard.vercel.app/api/login",
+      "https://anokhi-pehel-seven.vercel.app/api/login",
       {
         method: "POST",
         headers: {
@@ -36,7 +36,7 @@ export default function Login() {
       console.log(email);
 
       const roleResponse = await fetch(
-        `https://anokhi-pehel-dashboard.vercel.app/api2/getUserRoleByEmail?email=${email}`,
+        `https://anokhi-pehel-seven.vercel.app/api2/getUserRoleByEmail?email=${email}`,
         {
           method: "GET",
           headers: {
