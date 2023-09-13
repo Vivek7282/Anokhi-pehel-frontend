@@ -13,7 +13,7 @@ const LinescheduleTable = () => {
   useEffect(() => {
     // Fetch schedule data when the component mounts
     axios
-      .get("http://localhost:5000/api7/getlineschedule")
+      .get("https://anokhi-pehel-backend.vercel.app/api7/getlineschedule")
       .then((response) => {
         setScheduleData(response.data);
       })
@@ -25,7 +25,7 @@ const LinescheduleTable = () => {
   useEffect(() => {
     // Fetch user information when the component mounts
     axios
-      .get("http://localhost:5000/api2/mentors")
+      .get("https://anokhi-pehel-backend.vercel.app/api2/mentors")
       .then((response) => {
         // Convert the response data into a user information object
         const userDataObject = {};
