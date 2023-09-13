@@ -14,7 +14,7 @@ const StudentList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api1/studentlist")
+      .get("https://anokhi-pehel-backend.vercel.app/api1/studentlist")
       .then((response) => {
         setStudents(response.data);
       })
