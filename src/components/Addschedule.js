@@ -28,7 +28,7 @@ export default function AddSchedule() {
   useEffect(() => {
     // Fetch mentor names when the component mounts
     axios
-      .get("http://localhost:5000/api2/mentors")
+      .get("https://anokhi-pehel-backend.vercel.app/api2/mentors")
       .then((res) => {
         setUserNames(res.data);
       })
@@ -40,7 +40,7 @@ export default function AddSchedule() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api3/addschedule", schedule)
+      .post("https://anokhi-pehel-backend.vercel.app/api3/addschedule", schedule)
       .then((res) => {
         console.log(res);
         // Check if the response indicates success (you should have a proper way to determine success)
