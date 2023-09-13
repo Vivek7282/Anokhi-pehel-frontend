@@ -13,7 +13,7 @@ const TestScoreTable = () => {
   useEffect(() => {
     // Fetch test scores data when the component mounts
     axios
-      .get("http://localhost:5000/api5/getTestScores") // Update the API endpoint
+      .get("https://anokhi-pehel-backend.vercel.app/api5/getTestScores") // Update the API endpoint
       .then((response) => {
         setTestScores(response.data);
 
@@ -39,7 +39,7 @@ const TestScoreTable = () => {
 
     // Make an API call to fetch student names
     axios
-      .post("http://localhost:5000/api1/getStudentNames", {
+      .post("https://anokhi-pehel-backend.vercel.app/api1/getStudentNames", {
         studentIds: studentIdArray,
       })
       .then((response) => {

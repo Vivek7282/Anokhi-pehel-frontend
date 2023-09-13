@@ -14,7 +14,7 @@ const MentorList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api1/mentorlist")
+      .get("https://anokhi-pehel-backend.vercel.app/api1/mentorlist")
       .then((response) => {
         setUsers(response.data);
       })
