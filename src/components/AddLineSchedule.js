@@ -40,7 +40,7 @@ export default function AddSchedule() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api7/addlineschedule", schedule)
+      .post("https://anokhi-pehel-backend.vercel.app/api7/addlineschedule", schedule)
       .then((res) => {
         console.log(res);
         // Check if the response indicates success (you should have a proper way to determine success)
