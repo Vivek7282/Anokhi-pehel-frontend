@@ -27,7 +27,7 @@ const ScorePage = () => {
 
       // Send a request to the server to change the password
       const response = await axios.post(
-        "http://localhost:5000/api9/changePassword",
+        "https://anokhi-pehel-backend.vercel.app/api9/changePassword",
         {
           userId,
           currentPassword,
@@ -58,7 +58,7 @@ const ScorePage = () => {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:5000/api8/getmentorsByEmail?email=${userId}`)
+        .get(`https://anokhi-pehel-backend.vercel.app/api8/getmentorsByEmail?email=${userId}`)
         .then((res) => {
           setUser(res.data); // Assuming the response is an array, take the first item
         })
@@ -89,7 +89,7 @@ const ScorePage = () => {
         {user ? (
           <div className="mentor-card">
             <img
-              src={`http://localhost:5000/images/${user[0].photo}`}
+              src={`https://anokhi-pehel-backend.vercel.app/images/${user[0].photo}`}
               //   alt={(src = { profile })}
               className="mentor-photo"
             />
