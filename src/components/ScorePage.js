@@ -19,7 +19,7 @@ const ScorePage = () => {
   useEffect(() => {
     if (classId) {
       axios
-        .get(`http://localhost:5000/api1/getStudentsByClass?class=${classId}`)
+        .get(`https://anokhi-pehel-backend.vercel.app/api1/getStudentsByClass?class=${classId}`)
         .then((response) => {
           setStudents(response.data);
           // Initialize the attendanceData object with default values
@@ -85,7 +85,7 @@ const ScorePage = () => {
 
     // Send the attendance data to the server using Axios
     axios
-      .post("http://localhost:5000/api6/submitscore", scoreSubmission)
+      .post("https://anokhi-pehel-backend.vercel.app/api6/submitscore", scoreSubmission)
 
       .then((res) => {
         if (res.data === "Added") {
