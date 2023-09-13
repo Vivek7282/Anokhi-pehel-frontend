@@ -15,7 +15,7 @@ const ViewTopic = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api14/topic")
+      .get("https://anokhi-pehel-backend.vercel.app/api14/topic")
       .then((response) => {
         setTopics(response.data);
         const mentorIds = Array.from(
