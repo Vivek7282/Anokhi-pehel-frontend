@@ -18,7 +18,7 @@ const AttendancePage = () => {
   useEffect(() => {
     if (classId) {
       axios
-        .get(`http://localhost:5000/api1/getStudentsByClass?class=${classId}`)
+        .get(`https://anokhi-pehel-backend.vercel.app/api1/getStudentsByClass?class=${classId}`)
         .then((response) => {
           setStudents(response.data);
           // Initialize the attendanceData object with default values
