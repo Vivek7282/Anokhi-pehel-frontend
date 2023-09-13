@@ -13,7 +13,7 @@ const MentorList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api1/mentorlist")
+      .get("https://anokhi-pehel-backend.vercel.app/api1/mentorlist")
       .then((response) => {
         setUsers(response.data);
       })
@@ -38,7 +38,7 @@ const MentorList = () => {
     try {
       //   console.log(mentorId);
       // Send an API request to remove the mentor
-      await axios.delete(`http://localhost:5000/api1/removementor/${mentorId}`);
+      await axios.delete(`https://anokhi-pehel-backend.vercel.app/api1/removementor/${mentorId}`);
 
       // After successful removal, update the user list
       const updatedUsers = users.filter((user) => user._id !== mentorId);
