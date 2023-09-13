@@ -11,7 +11,7 @@ const StudentList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api1/studentlist")
+      .get("https://anokhi-pehel-backend.vercel.app/api1/studentlist")
       .then((response) => {
         setStudents(response.data);
       })
@@ -40,7 +40,7 @@ const StudentList = () => {
     try {
       // Send a request to delete the student by ID
       await axios.delete(
-        `http://localhost:5000/api1/removestudent/${studentId}`
+        `https://anokhi-pehel-backend.vercel.app/api1/removestudent/${studentId}`
       );
       // Remove the deleted student from the local state
       setStudents((prevStudents) =>
