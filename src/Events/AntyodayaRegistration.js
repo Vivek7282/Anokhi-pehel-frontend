@@ -28,7 +28,7 @@ export default function AntyodayaRegistration() {
     formData.append("photo", credentials.photo);
 
     axios
-      .post("http://localhost:5000/api/createuser", formData)
+      .post("https://anokhi-pehel-backend.vercel.app/api/createuser", formData)
       .then((res) => {
         console.log(res);
         // Check if the response indicates success (you should have a proper way to determine success)
