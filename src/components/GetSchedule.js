@@ -13,7 +13,7 @@ const ScheduleTable = () => {
   useEffect(() => {
     // Fetch schedule data when the component mounts
     axios
-      .get("http://localhost:5000/api3/getschedule")
+      .get("https://anokhi-pehel-backend.vercel.app/api3/getschedule")
       .then((response) => {
         setScheduleData(response.data);
       })
@@ -25,7 +25,7 @@ const ScheduleTable = () => {
   useEffect(() => {
     // Fetch mentor information when the component mounts
     axios
-      .get("http://localhost:5000/api2/mentors")
+      .get("https://anokhi-pehel-backend.vercel.app/api2/mentors")
       .then((response) => {
         // Convert the response data into a mentor information object
         const mentorData = {};
