@@ -10,16 +10,19 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: credentials.email,
-        password: credentials.password,
-      }),
-    });
+    const response = await fetch(
+      "https://anokhi-pehel-dashboard.vercel.app/api/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: credentials.email,
+          password: credentials.password,
+        }),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (json.success) {
@@ -33,7 +36,7 @@ export default function Login() {
       console.log(email);
 
       const roleResponse = await fetch(
-        `http://localhost:5000/api2/getUserRoleByEmail?email=${email}`,
+        `https://anokhi-pehel-dashboard.vercel.app/api2/getUserRoleByEmail?email=${email}`,
         {
           method: "GET",
           headers: {
