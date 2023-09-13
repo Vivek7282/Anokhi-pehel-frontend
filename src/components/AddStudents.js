@@ -33,7 +33,7 @@ export default function AddStudents() {
     formData.append("photo", credentials.photo);
 
     axios
-      .post("http://localhost:5000/api/addstudent", formData)
+      .post("https://anokhi-pehel-backend.vercel.app/api/addstudent", formData)
       .then((res) => {
         console.log(res);
         // Check if the response indicates success (you should have a proper way to determine success)
