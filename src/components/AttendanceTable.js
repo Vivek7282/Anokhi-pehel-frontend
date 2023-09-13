@@ -12,7 +12,7 @@ const AttendanceTable = () => {
   useEffect(() => {
     // Fetch attendance data when the component mounts
     axios
-      .get("http://localhost:5000/api5/getAttendance")
+      .get("https://anokhi-pehel-backend.vercel.app/api5/getAttendance")
       .then((response) => {
         setAttendanceData(response.data);
 
@@ -40,7 +40,7 @@ const AttendanceTable = () => {
 
     // Make an API call to fetch student names
     axios
-      .post("http://localhost:5000/api1/getStudentNames", {
+      .post("https://anokhi-pehel-backend.vercel.app/api1/getStudentNames", {
         studentIds: studentIdArray,
       })
       .then((response) => {
