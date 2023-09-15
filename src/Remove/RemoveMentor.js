@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"; // Import Link and useHistory
 import myImage from "../image/backgroundImage.jpeg";
 import Header from "./Header";
 import Footer from "./Footer";
+import { BASE_URL } from "../Service/helper";
 
 const MentorList = () => {
   const [users, setUsers] = useState([]);
@@ -13,7 +14,7 @@ const MentorList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api1/mentorlist")
+      .get(`${BASE_URL}/api/mentorlist`)
       .then((response) => {
         setUsers(response.data);
       })
@@ -38,7 +39,7 @@ const MentorList = () => {
     try {
       //   console.log(mentorId);
       // Send an API request to remove the mentor
-      await axios.delete(`http://localhost:5000/api1/removementor/${mentorId}`);
+      await axios.delete(`${BASE_URL}/api/removementor/${mentorId}`);
 
       // After successful removal, update the user list
       const updatedUsers = users.filter((user) => user._id !== mentorId);

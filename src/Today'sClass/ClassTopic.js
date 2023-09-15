@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import myImage from "../image/backgroundImage.jpeg";
 import Image from "../image/340434.png";
-
+import { BASE_URL } from "../Service/helper";
 const TopicsCoveredPage = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -24,7 +24,7 @@ const TopicsCoveredPage = () => {
       // Fetch the list of teachers from the schedule collection
       //   console.log(classId);
       axios
-        .get(`http://localhost:5000/api13/getTeachersByClass?class=${classId}`)
+        .get(`${BASE_URL}/api/getTeachersByClass?class=${classId}`)
         .then((response) => {
           const mentorIds = response.data.flatMap((mentor) =>
             mentor.schedule.map((scheduleItem) => scheduleItem.mentor)
@@ -35,7 +35,7 @@ const TopicsCoveredPage = () => {
           const mentorPromises = mentorIds.map(async (mentorId) => {
             try {
               const mentorNameResponse = await axios.get(
-                `http://localhost:5000/api1/getmentorsByUserId?userid=${mentorId}`
+                `${BASE_URL}/api/getmentorsByUserId?userid=${mentorId}`
               );
               return mentorNameResponse.data.name; // Assuming the mentor's name is stored in the "name" field
             } catch (error) {
@@ -93,7 +93,7 @@ const TopicsCoveredPage = () => {
 
     // Send the topic data to the server using Axios
     axios
-      .post("http://localhost:5000/api14/addTopicCovered", topicSubmission)
+      .post(`${BASE_URL}/api14/addTopicCovered`, topicSubmission)
       .then((response) => {
         console.log(response.data);
         if (response.data === "Added") {

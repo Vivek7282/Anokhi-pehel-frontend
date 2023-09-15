@@ -4,25 +4,23 @@ import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import Image from "../image/340434.png";
+import { BASE_URL } from "../Service/helper";
 export default function Login() {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(
-      "https://anokhi-pehel-backend.vercel.app/api/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: credentials.email,
-          password: credentials.password,
-        }),
-      }
-    );
+    const response = await fetch(`${BASE_URL}/api/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: credentials.email,
+        password: credentials.password,
+      }),
+    });
     const json = await response.json();
     console.log(json);
     if (json.success) {
@@ -36,7 +34,7 @@ export default function Login() {
       console.log(email);
 
       const roleResponse = await fetch(
-        `https://anokhi-pehel-backend.vercel.app/api2/getUserRoleByEmail?email=${email}`,
+        `${BASE_URL}/api/getUserRoleByEmail?email=${email}`,
         {
           method: "GET",
           headers: {
