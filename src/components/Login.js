@@ -31,7 +31,7 @@ export default function Login() {
       // Fetch the user's role by email
 
       const email = credentials.email;
-      console.log(email);
+      // console.log(email);
 
       const roleResponse = await fetch(
         `${BASE_URL}/api/getUserRoleByEmail?email=${email}`,

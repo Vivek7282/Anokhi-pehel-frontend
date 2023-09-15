@@ -35,50 +35,44 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route exact path="/adduser" element={<SignUp />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-          <Route exact path="/dashboardadmin" element={<DashboardAdmin />} />
-          <Route exact path="/takeattendance" element={<TakeAttendance />} />
-          <Route path="/attendance" element={<AttendancePage />} />
-          <Route path="/editprofile" element={<EditProfile />} />
-          <Route path="/addscore" element={<AddScore />} />
-          <Route path="/score" element={<ScorePage />} />
-          <Route path="/viewscore" element={<ViewScorePage />} />
-          <Route path="/viewscorepage" element={<ViewScorePage />} />
-          <Route path="/mentorprofile" element={<MentorProfile />} />
-          <Route path="/studentprofile" element={<StudentProfile />} />
-          <Route path="/getclasslist" element={<GetClasslist />} />
-          <Route path="/classtopic" element={<ClassTopic />} />
-          <Route path="/viewtopic" element={<ViewTopic />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/editclass" element={<EditClass />} />
-          <Route path="/attendancerecord" element={<AttendanceTable />} />
-          <Route
-            exact
-            path="/dashboardfinalyear"
-            element={<DashboardFinalYear />}
-          />
-          <Route exact path="/addstudent" element={<AddStudent />} />
-          <Route exact path="/getschedule" element={<GetSchedule />} />
-          <Route exact path="/getlineschedule" element={<GetLineSchedule />} />
-          <Route exact path="/students" element={<StudentList />} />
-          <Route exact path="/mentors" element={<MentorList />} />
-          <Route exact path="/addschedule" element={<Addschedule />} />
-          <Route exact path="/addlineschedule" element={<AddLineSchedule />} />
-          <Route exact path="/removementor" element={<RemoveMentor />} />
-          <Route exact path="/removestudent" element={<RemoveStudent />} />
-          <Route
-            exact
-            path="/antyodayareg"
-            element={<AntyodayaRegistration />}
-          />
-          <Route exact path="/logout" element={<Logout />} />
-          {/* <Route exact path="/class/:class" component={StudentList} /> */}
-        </Routes>
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/adduser" element={<SignUp />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/dashboardadmin" element={<DashboardAdmin />} />
+        <Route exact path="/takeattendance" element={<TakeAttendance />} />
+        <Route path="/attendance" element={<AttendancePage />} />
+        <Route path="/editprofile" element={<EditProfile />} />
+        <Route path="/addscore" element={<AddScore />} />
+        <Route path="/score" element={<ScorePage />} />
+        <Route path="/viewscore" element={<ViewScorePage />} />
+        <Route path="/viewscorepage" element={<ViewScorePage />} />
+        <Route path="/mentorprofile" element={<MentorProfile />} />
+        <Route path="/studentprofile" element={<StudentProfile />} />
+        <Route path="/getclasslist" element={<GetClasslist />} />
+        <Route path="/classtopic" element={<ClassTopic />} />
+        <Route path="/viewtopic" element={<ViewTopic />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/editclass" element={<EditClass />} />
+        <Route path="/attendancerecord" element={<AttendanceTable />} />
+        <Route
+          exact
+          path="/dashboardfinalyear"
+          element={<DashboardFinalYear />}
+        />
+        <Route exact path="/addstudent" element={<AddStudent />} />
+        <Route exact path="/getschedule" element={<GetSchedule />} />
+        <Route exact path="/getlineschedule" element={<GetLineSchedule />} />
+        <Route exact path="/students" element={<StudentList />} />
+        <Route exact path="/mentors" element={<MentorList />} />
+        <Route exact path="/addschedule" element={<Addschedule />} />
+        <Route exact path="/addlineschedule" element={<AddLineSchedule />} />
+        <Route exact path="/removementor" element={<RemoveMentor />} />
+        <Route exact path="/removestudent" element={<RemoveStudent />} />
+        <Route exact path="/antyodayareg" element={<AntyodayaRegistration />} />
+        <Route exact path="/logout" element={<Logout />} />
+        {/* <Route exact path="/class/:class" component={StudentList} /> */}
+      </Routes>
     </Router>
   );
 }
