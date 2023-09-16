@@ -88,7 +88,7 @@ const ScorePage = () => {
         {user ? (
           <div className="mentor-card">
             <img
-              src={`http://localhost:5000/images/${user[0].photo}`}
+              src={`https://anokhi-pehel-backend.vercel.app/images/${user[0].photo}`}
               //   alt={(src = { profile })}
               className="mentor-photo"
             />

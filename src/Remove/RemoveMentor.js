@@ -39,7 +39,7 @@ const MentorList = () => {
     try {
       //   console.log(mentorId);
       // Send an API request to remove the mentor
-      await axios.delete(`${BASE_URL}/api/removementor/${mentorId}`);
+      await axios.delete(`http://localhost:5000/api1/removementor/${mentorId}`);
 
       // After successful removal, update the user list
       const updatedUsers = users.filter((user) => user._id !== mentorId);
