@@ -11,7 +11,7 @@ const ScheduleTable = () => {
   const [mentorsInfo, setMentorsInfo] = useState({});
   const [editingSchedule, setEditingSchedule] = useState(null); // To track the schedule being edited
   const [editedScheduleData, setEditedScheduleData] = useState({}); // To store edited schedule data
-
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   useEffect(() => {
     axios
       .get(`${BASE_URL}/api/getschedule`)
