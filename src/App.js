@@ -30,7 +30,7 @@ import ViewTopic from "./Today'sClass/ViewTopic";
 import ClassTopic from "./Today'sClass/ClassTopic";
 import Contact from "./Contact/Contact";
 import EditClass from "./Edit/EditClass";
-import Protected from "../src/Protected/Protected";
+import Protected from "./Protected/Protected";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AddSchedule from "./components/Addschedule";
 import Signup from "./components/SignUp";

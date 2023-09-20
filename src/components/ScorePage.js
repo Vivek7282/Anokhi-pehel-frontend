@@ -10,7 +10,7 @@ const ScorePage = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const classId = searchParams.get("class");
-
+  const navigate = useNavigate();
   const [students, setStudents] = useState([]);
   const [scoreData, setScoreData] = useState({});
   const [errors, setErrors] = useState({}); // State to manage validation errors
@@ -91,7 +91,7 @@ const ScorePage = () => {
         if (res.data === "Added") {
           console.log(res.data);
           alert("Score submitted successfully");
-          const navigate = useNavigate();
+
           navigate("/dashboard");
           setScoreData({
             subject: "",
